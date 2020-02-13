@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.itcast.dao.SetmealDao">
+    <insert id="add" parameterType="cn.itcast.pojo.Setmeal">
+        <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+
+        INSERT INTO t_setmeal(id,name,code,helpCode,sex,age,price,remark,attention,img)
+        VALUES
+        (#{id},#{name},#{code},#{helpCode},#{sex},#{age},#{price},#{remark},#{attention},#{img})
+    </insert>
+
+    <insert id="addSetmealAndCheckGroup" parameterType="map">
+        INSERT INTO t_setmeal_checkgroup(setmeal_id,checkgroup_id)
+        VALUES
+        (#{setmealId},#{checkGroupId})
+    </insert>
+
+    <select id="selectByCondition" parameterType="String" resultType="cn.itcast.pojo.Setmeal">
+        SELECT * FROM t_setmeal
+        <if test="value != null and value.length > 0">
+            WHERE code = #{value} OR name = #{value} OR helpCode = #{value}
+        </if>
+    </select>
+
+    <select id="findCheckGroupBySetmealId" parameterType="Integer" resultType="Integer">
+        SELECT checkgroup_id FROM t_setmeal_checkgroup WHERE setmeal_id = #{id}
+    </select>
+
+    <update id="updateSetmeal" parameterType="cn.itcast.pojo.Setmeal">
+        UPDATE t_setmeal
+        <set>
+            <if test="name != null">
+                name = #{name},
+            </if>
+            <if test="code != null">
+                code = #{code},
+            </if>
+            <if test="helpCode != null">
+                helpCode = #{helpCode},
+            </if>
+            <if test="sex != null">
+                sex = #{sex},
+            </if>
+            <if test="age != null">
+                age = #{age},
+            </if>
+            <if test="price != null">
+                price = #{price},
+            </if>
+            <if test="remark != null">
+                remark = #{remark},
+            </if>
+            <if test="attention != null">
+                attention = #{attention},
+            </if>
+            <if test="img != null">
+                img = #{img},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteDataBySetmealId" parameterType="Integer">
+        delete from t_setmeal_checkgroup where setmeal_id = #{setmealId}
+    </delete>
+
+    <select id="getSetmeal" resultType="cn.itcast.pojo.Setmeal">
+        select * from t_setmeal
+    </select>
+
+
+    <select id="findById" parameterType="Integer" resultMap="findByIdResultMap">
+        SELECT * FROM t_setmeal WHERE id = #{id}
+    </select>
+
+    <resultMap id="findByIdResultMap" type="cn.itcast.pojo.Setmeal" extends="baseResultMap">
+        <collection property="checkGroups"
+                    ofType="cn.itcast.pojo.CheckGroup"
+                    select="cn.itcast.dao.CheckGroupDao.findCheckGroupById"
+                    column="id">
+        </collection>
+    </resultMap>
+    
+    <resultMap id="baseResultMap" type="cn.itcast.pojo.Setmeal">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="code" property="code"/>
+        <result column="helpCode" property="helpCode"/>
+        <result column="sex" property="sex"/>
+        <result column="age" property="age"/>
+        <result column="price" property="price"/>
+        <result column="remark" property="remark"/>
+        <result column="attention" property="attention"/>
+        <result column="img" property="img"/>
+    </resultMap>
+</mapper>
