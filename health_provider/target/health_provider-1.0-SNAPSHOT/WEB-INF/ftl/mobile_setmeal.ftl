@@ -10,6 +10,9 @@
     <link rel="icon" href="../img/asset-favico.ico">
     <title>预约</title>
     <link rel="stylesheet" href="../css/page-health-order.css" />
+    <script src="../plugins/vue/vue.js"></script>
+    <script src="../plugins/vue/axios-0.18.0.js"></script>
+    <script src="../plugins/healthmobile.js"></script>
 </head>
 <body data-spy="scroll" data-target="#myNavbar" data-offset="150">
 <div class="app" id="app">
@@ -24,8 +27,9 @@
         <div class="list-column1">
             <ul class="list">
                 <#list setmealList as setmeal>
+                    <li class="list-item">
                     <a class="link-page" href="setmeal_detail_${setmeal.id}.html">
-                        <img class="img-object f-left" :src="http://q5b7rtrve.bkt.clouddn.com/${setmeal.img}" alt="">
+                        <img class="img-object f-left" src="http://q5b7rtrve.bkt.clouddn.com/${setmeal.img}" alt="">
                         <div class="item-body">
                             <h4 class="ellipsis item-title">${setmeal.name}</h4>
                             <p class="ellipsis-more item-desc">${setmeal.remark}</p>
@@ -45,6 +49,7 @@
                             </p>
                         </div>
                     </a>
+                    </li>
                 </#list>
             </ul>
         </div>

@@ -1,1 +1,3 @@
-cn\itcast\controller\Controller.class
+cn\itcast\controller\ValidateCode.class
+cn\itcast\controller\OrderController.class
+cn\itcast\controller\MobileController.class

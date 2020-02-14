@@ -2,3 +2,4 @@ cn\itcast\service\CheckItemService.class
 cn\itcast\service\SetmealService.class
 cn\itcast\service\OrderSettingService.class
 cn\itcast\service\CheckGroupService.class
+cn\itcast\service\OrderService.class

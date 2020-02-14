@@ -1,8 +1,11 @@
-cn\itcast\service\impl\SetmealServiceImpl.class
 cn\itcast\dao\CheckGroupDao.class
-cn\itcast\service\impl\CheckItemServiceImpl.class
 cn\itcast\service\impl\OrderSettingServiceImpl.class
 cn\itcast\service\impl\CheckGroupServiceImpl.class
 cn\itcast\dao\CheckItemDao.class
-cn\itcast\dao\OrderSettingDao.class
 cn\itcast\dao\SetmealDao.class
+cn\itcast\service\impl\SetmealServiceImpl.class
+cn\itcast\dao\OrderDao.class
+cn\itcast\service\impl\OrderServiceImpl.class
+cn\itcast\service\impl\CheckItemServiceImpl.class
+cn\itcast\dao\OrderSettingDao.class
+cn\itcast\dao\MemberDao.class

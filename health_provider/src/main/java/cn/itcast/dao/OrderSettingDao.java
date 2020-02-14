@@ -9,4 +9,6 @@ public interface OrderSettingDao {
     public void editNumberByOrderDate(OrderSetting orderSetting);
     public long findCountByOrderDate(Date orderDate);
     public List<OrderSetting> getOrderSettingByMonth(String date);
+    public OrderSetting findOrderSettingByDate(String orderDate);
+    public void editReservationsByOrderDate(OrderSetting orderSetting);
 }

@@ -86,7 +86,7 @@
                     </ul>
                 </div>
                 <div class="box-button">
-                    <a @click="toOrderInfo()" class="order-btn">立即预约</a>
+                    <a href="orderInfo.html?id=${setmeal.id}" class="order-btn">立即预约</a>
                 </div>
             </div>
         </div>

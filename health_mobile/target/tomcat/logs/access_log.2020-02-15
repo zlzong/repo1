@@ -1,0 +1,16 @@
+0:0:0:0:0:0:0:1 - - [15/Feb/2020:01:17:47 +0800] "GET /pages/setmeal_detail_19.html HTTP/1.1" 200 8968 http-bio-80-exec-1 50
+0:0:0:0:0:0:0:1 - - [15/Feb/2020:01:17:47 +0800] "GET /css/page-health-orderDetail.css HTTP/1.1" 200 9879 http-bio-80-exec-3 11
+0:0:0:0:0:0:0:1 - - [15/Feb/2020:01:17:47 +0800] "GET /plugins/vue/axios.min.map HTTP/1.1" 404 1001 http-bio-80-exec-4 4
+0:0:0:0:0:0:0:1 - - [15/Feb/2020:01:17:52 +0800] "GET /pages/m_setmeal.html HTTP/1.1" 200 8205 http-bio-80-exec-5 7
+0:0:0:0:0:0:0:1 - - [15/Feb/2020:01:17:52 +0800] "GET /css/page-health-order.css HTTP/1.1" 200 11454 http-bio-80-exec-7 7
+0:0:0:0:0:0:0:1 - - [15/Feb/2020:01:17:52 +0800] "GET /plugins/vue/axios.min.map HTTP/1.1" 404 1001 http-bio-80-exec-8 1
+0:0:0:0:0:0:0:1 - - [15/Feb/2020:01:17:57 +0800] "GET /plugins/vue/axios.min.map HTTP/1.1" 404 1001 http-bio-80-exec-10 3
+0:0:0:0:0:0:0:1 - - [15/Feb/2020:01:17:59 +0800] "GET /pages/orderInfo.html?id=19 HTTP/1.1" 304 - http-bio-80-exec-10 11
+0:0:0:0:0:0:0:1 - - [15/Feb/2020:01:17:59 +0800] "GET /plugins/vue/axios.min.map HTTP/1.1" 404 1001 http-bio-80-exec-3 1
+0:0:0:0:0:0:0:1 - - [15/Feb/2020:01:18:01 +0800] "GET /setmeal/findById.do?id=19 HTTP/1.1" 200 4982 http-bio-80-exec-3 1571
+0:0:0:0:0:0:0:1 - - [15/Feb/2020:01:18:27 +0800] "POST /validateCode/send4Order.do?telephone=18860450042 HTTP/1.1" 200 59 http-bio-80-exec-7 7522
+0:0:0:0:0:0:0:1 - - [15/Feb/2020:01:19:17 +0800] "POST /orderController/submit.do HTTP/1.1" 200 50 http-bio-80-exec-6 286
+0:0:0:0:0:0:0:1 - - [15/Feb/2020:01:19:17 +0800] "GET /pages/orderSuccess.html?orderId=11 HTTP/1.1" 200 4489 http-bio-80-exec-6 14
+0:0:0:0:0:0:0:1 - - [15/Feb/2020:01:19:17 +0800] "GET /css/page-health-orderNotice.css HTTP/1.1" 200 8645 http-bio-80-exec-6 10
+0:0:0:0:0:0:0:1 - - [15/Feb/2020:01:19:17 +0800] "POST /order/findById.do?id=11 HTTP/1.1" 404 949 http-bio-80-exec-6 8
+0:0:0:0:0:0:0:1 - - [15/Feb/2020:01:19:18 +0800] "GET /plugins/vue/axios.min.map HTTP/1.1" 404 1001 http-bio-80-exec-3 2

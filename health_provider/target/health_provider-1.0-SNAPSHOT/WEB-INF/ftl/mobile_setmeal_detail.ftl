@@ -29,7 +29,7 @@
     <div class="contentBox">
         <div class="card">
             <div class="project-img">
-                <img :src="imgUrl" width="100%" height="100%" />
+                <img src="http://q5b7rtrve.bkt.clouddn.com/${setmeal.img}" width="100%" height="100%" />
             </div>
             <div class="project-text">
                 <h4 class="tit">${setmeal.name}</h4>
@@ -86,7 +86,7 @@
                     </ul>
                 </div>
                 <div class="box-button">
-                    <a @click="toOrderInfo()" class="order-btn">立即预约</a>
+                    <a href="orderInfo.html?id=${setmeal.id}" class="order-btn">立即预约</a>
                 </div>
             </div>
         </div>

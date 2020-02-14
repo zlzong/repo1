@@ -19,4 +19,12 @@
     <select id="getOrderSettingByMonth" parameterType="string" resultType="cn.itcast.pojo.OrderSetting">
         SELECT id,orderDate,number,reservations FROM t_ordersetting WHERE DATE_FORMAT(orderDate,'%Y-%m') = #{date}
     </select>
+
+    <select id="findOrderSettingByDate" parameterType="string" resultType="cn.itcast.pojo.OrderSetting">
+        select * from t_ordersetting where orderDate = #{orderDate}
+    </select>
+
+    <update id="editReservationsByOrderDate" parameterType="cn.itcast.pojo.OrderSetting">
+        update t_ordersetting set reservations = #{reservations} where orderDate = #{orderDate}
+    </update>
 </mapper>

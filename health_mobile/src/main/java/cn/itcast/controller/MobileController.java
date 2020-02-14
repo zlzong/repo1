@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/setmeal")
-public class Controller {
+public class MobileController {
     @Reference
     private SetmealService setmealService;
 

@@ -29,7 +29,7 @@
     <div class="contentBox">
         <div class="card">
             <div class="project-img">
-                <img :src="imgUrl" width="100%" height="100%" />
+                <img src="http://q5b7rtrve.bkt.clouddn.com/4c1510a4-cdd6-4b8c-97c6-9c855266f913a.jpg" width="100%" height="100%" />
             </div>
             <div class="project-text">
                 <h4 class="tit">自定义检查</h4>
@@ -62,72 +62,118 @@
                 </div>
                 <div class="table-content">
                     <ul class="table-list">
-FreeMarker template error (DEBUG mode; use RETHROW in production!):
-The following has evaluated to null or missing:
-==> setmeal.checkGroups  [in template "mobile_setmeal_detail.ftl" at line 73, column 32]
-
-----
-Tip: It's the step after the last dot that caused this error, not those before it.
-----
-Tip: If the failing expression is known to be legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
-----
-
-----
-FTL stack trace ("~" means nesting-related):
-	- Failed at: #list setmeal.checkGroups as checkgroup  [in template "mobile_setmeal_detail.ftl" at line 73, column 25]
-----
-
-Java stack trace (for programmers):
-----
-freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
-	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:131)
-	at freemarker.core.Expression.assertNonNull(Expression.java:194)
-	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:74)
-	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:64)
-	at freemarker.core.Environment.visit(Environment.java:324)
-	at freemarker.core.MixedContent.accept(MixedContent.java:54)
-	at freemarker.core.Environment.visit(Environment.java:324)
-	at freemarker.core.Environment.process(Environment.java:302)
-	at freemarker.template.Template.process(Template.java:325)
-	at cn.itcast.service.impl.SetmealServiceImpl.generateHtml(SetmealServiceImpl.java:107)
-	at cn.itcast.service.impl.SetmealServiceImpl.generateMobileSetmealDetailHtml(SetmealServiceImpl.java:133)
-	at cn.itcast.service.impl.SetmealServiceImpl.generateMobileStaticHtml(SetmealServiceImpl.java:119)
-	at cn.itcast.service.impl.SetmealServiceImpl.add(SetmealServiceImpl.java:58)
-	at cn.itcast.service.impl.SetmealServiceImpl$$FastClassBySpringCGLIB$$f0e6d064.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:747)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
-	at cn.itcast.service.impl.SetmealServiceImpl$$EnhancerBySpringCGLIB$$205a40c4.add(<generated>)
-	at com.alibaba.dubbo.common.bytecode.Wrapper3.invokeMethod(Wrapper3.java)
-	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:45)
-	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:71)
-	at com.alibaba.dubbo.config.invoker.DelegateProviderMetaDataInvoker.invoke(DelegateProviderMetaDataInvoker.java:48)
-	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:52)
-	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:61)
-	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
-	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:74)
-	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
-	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:41)
-	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
-	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:77)
-	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
-	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:71)
-	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
-	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:131)
-	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
-	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:37)
-	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
-	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:37)
-	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:68)
-	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:98)
-	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:96)
-	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:168)
-	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:50)
-	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:79)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:748)
+                            <li class="table-item">
+                                <div class="item flex2">一般检查</div>
+                                <div class="item flex3">
+                                        <label>
+                                            身高
+                                        </label>
+                                        <label>
+                                            体重
+                                        </label>
+                                        <label>
+                                            体重指数
+                                        </label>
+                                        <label>
+                                            收缩压
+                                        </label>
+                                        <label>
+                                            舒张压
+                                        </label>
+                                </div>
+                                <div class="item flex3">一般检查</div>
+                            </li>
+                            <li class="table-item">
+                                <div class="item flex2">视力色觉</div>
+                                <div class="item flex3">
+                                        <label>
+                                            裸视力（右）
+                                        </label>
+                                        <label>
+                                            裸视力（左）
+                                        </label>
+                                        <label>
+                                            矫正视力（右）
+                                        </label>
+                                        <label>
+                                            矫正视力（左）
+                                        </label>
+                                        <label>
+                                            色觉
+                                        </label>
+                                </div>
+                                <div class="item flex3">视力色觉</div>
+                            </li>
+                            <li class="table-item">
+                                <div class="item flex2">血常规</div>
+                                <div class="item flex3">
+                                        <label>
+                                            白细胞计数
+                                        </label>
+                                        <label>
+                                            红细胞计数
+                                        </label>
+                                        <label>
+                                            血红蛋白
+                                        </label>
+                                        <label>
+                                            红细胞压积
+                                        </label>
+                                        <label>
+                                            平均红细胞体积
+                                        </label>
+                                        <label>
+                                            平均红细胞血红蛋白含量
+                                        </label>
+                                        <label>
+                                            平均红细胞血红蛋白浓度
+                                        </label>
+                                        <label>
+                                            红细胞分布宽度-变异系数
+                                        </label>
+                                        <label>
+                                            血小板计数
+                                        </label>
+                                        <label>
+                                            平均血小板体积
+                                        </label>
+                                        <label>
+                                            血小板分布宽度
+                                        </label>
+                                        <label>
+                                            淋巴细胞百分比
+                                        </label>
+                                        <label>
+                                            中间细胞百分比
+                                        </label>
+                                        <label>
+                                            中性粒细胞百分比
+                                        </label>
+                                        <label>
+                                            淋巴细胞绝对值
+                                        </label>
+                                        <label>
+                                            中间细胞绝对值
+                                        </label>
+                                        <label>
+                                            中性粒细胞绝对值
+                                        </label>
+                                        <label>
+                                            红细胞分布宽度-标准差
+                                        </label>
+                                        <label>
+                                            血小板压积
+                                        </label>
+                                </div>
+                                <div class="item flex3">血常规</div>
+                            </li>
+                    </ul>
+                </div>
+                <div class="box-button">
+                    <a href="orderInfo.html?id=6" class="order-btn">立即预约</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
