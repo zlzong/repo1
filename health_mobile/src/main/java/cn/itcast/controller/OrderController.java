@@ -30,7 +30,6 @@ public class OrderController {
 
     @RequestMapping("/submit")
     public Result submit (@RequestBody Map map) {
-
         //获取验证码比对
         String validateCode = (String) map.get("validateCode");
         String validateCodeInRedis = jedisPool.getResource().get(map.get("telephone") + RedisMessageConstant.SENDTYPE_ORDER);
@@ -52,6 +51,18 @@ public class OrderController {
         } else {
             //验证码校验失败失败，返回数据
             return new Result(false,MessageConstant.VALIDATECODE_ERROR);
+        }
+    }
+
+
+    @RequestMapping("/findById")
+    public Result findById(String id) {
+        try {
+            Map map = orderService.findById(id);
+            return new Result(true,MessageConstant.QUERY_ORDER_SUCCESS,map);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new Result(false,MessageConstant.QUERY_ORDER_FAIL);
         }
     }
 }

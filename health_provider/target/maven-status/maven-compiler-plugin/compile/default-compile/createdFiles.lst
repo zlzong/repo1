@@ -1,4 +1,5 @@
 cn\itcast\dao\CheckGroupDao.class
+cn\itcast\service\impl\LoginServiceImpl.class
 cn\itcast\service\impl\OrderSettingServiceImpl.class
 cn\itcast\service\impl\CheckGroupServiceImpl.class
 cn\itcast\dao\CheckItemDao.class

@@ -66,8 +66,12 @@
                 orderInfo:{}
             },
             mounted(){
-                axios.post("/order/findById.do?id=" + id).then((response) => {
-                    this.orderInfo = response.data.data;
+                axios.post("/orderController/findById.do?id=" + id).then((res) => {
+                    if (res.data.flag) {
+                        this.orderInfo = res.data.data;
+                    } else {
+                        this.$message.error("预约查询失败，请稍后查看");
+                    }
                 });
             }
         });

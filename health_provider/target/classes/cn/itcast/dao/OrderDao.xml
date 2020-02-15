@@ -54,6 +54,15 @@
         where o.member_id=m.id and o.setmeal_id=s.id and o.id=#{id}
     </select>
 
+    <select id="findById" parameterType="string" resultType="map">
+        select m.name member,s.name setmeal,o.orderDate,o.orderType
+        from
+        t_member m,
+        t_setmeal s,
+        t_order o
+        where o.member_id = m.id and o.setmeal_id = s.id and o.id = #{id};
+    </select>
+
     <!--根据日期统计预约数-->
     <select id="findOrderCountByDate" parameterType="string" resultType="int">
         select count(id) from t_order where orderDate = #{value}

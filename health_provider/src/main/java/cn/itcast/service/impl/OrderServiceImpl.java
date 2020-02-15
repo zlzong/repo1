@@ -44,6 +44,12 @@ public class OrderServiceImpl implements OrderService {
 
         //判断是否重复预约
         String telephone = (String) map.get("telephone");
+
+        /**
+         * bug:
+         * memberDao
+         * Expected one result (or null) to be returned by selectOne(), but found: 2
+         */
         Member member = memberDao.findByTelephone(telephone);
         if (member != null) {
             Integer memberId = member.getId();
@@ -77,5 +83,10 @@ public class OrderServiceImpl implements OrderService {
         //修改预约名额
         //返回预约id
         return order.getId().toString();
+    }
+
+    @Override
+    public Map findById(String id) {
+       return orderDao.findById(id);
     }
 }

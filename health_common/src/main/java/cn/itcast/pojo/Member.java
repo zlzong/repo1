@@ -19,6 +19,14 @@ public class Member implements Serializable{
     private Date birthday;//出生日期
     private String remark;//备注
 
+    public Member(String phoneNumber, Date regTime) {
+        this.phoneNumber = phoneNumber;
+        this.regTime = regTime;
+    }
+
+    public Member() {
+    }
+
     public Integer getId() {
         return id;
     }
