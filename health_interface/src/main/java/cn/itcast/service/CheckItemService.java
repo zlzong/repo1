@@ -7,6 +7,7 @@ import cn.itcast.pojo.CheckItem;
 import java.util.List;
 
 public interface CheckItemService {
+    //添加检查项
     public void add(CheckItem checkItem);
     public PageResult findPage(QueryPageBean queryPageBean);
     public void deleteById(Integer id);

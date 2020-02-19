@@ -9,6 +9,7 @@ import java.util.List;
 
 @Repository
 public interface CheckItemDao {
+    //添加检查项
     public void add(CheckItem checkItem);
     public Page<CheckItem> selectByCondition(String queryString);
     public long findCountByCheckItemId(Integer id);

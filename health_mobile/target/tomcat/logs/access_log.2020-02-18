@@ -1,0 +1,15 @@
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:12:09:10 +0800] "GET / HTTP/1.1" 304 - http-bio-80-exec-2 59
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:12:09:13 +0800] "GET /pages/m_setmeal.html HTTP/1.1" 304 - http-bio-80-exec-3 7
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:12:09:16 +0800] "GET /pages/setmeal_detail_9.html HTTP/1.1" 200 17433 http-bio-80-exec-5 14
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:12:09:20 +0800] "GET /pages/orderInfo.html?id=9 HTTP/1.1" 200 8993 http-bio-80-exec-7 6
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:12:09:20 +0800] "GET /setmeal/findById.do?id=9 HTTP/1.1" 200 63 http-bio-80-exec-8 172
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:12:10:59 +0800] "GET /pages/setmeal_detail_9.html HTTP/1.1" 304 - http-bio-80-exec-10 7
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:12:10:59 +0800] "GET /img/asset-favico.ico HTTP/1.1" 200 4286 http-bio-80-exec-10 7
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:12:11:03 +0800] "GET /pages/setmeal_detail_6.html HTTP/1.1" 200 8937 http-bio-80-exec-10 8
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:12:11:06 +0800] "GET /pages/orderInfo.html?id=6 HTTP/1.1" 200 8993 http-bio-80-exec-5 4
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:12:11:06 +0800] "GET /setmeal/findById.do?id=6 HTTP/1.1" 200 63 http-bio-80-exec-5 10
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:21:10:55 +0800] "GET /pages/orderInfo.html?id=6 HTTP/1.1" 304 - http-bio-80-exec-3 76
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:21:10:55 +0800] "GET /setmeal/findById.do?id=6 HTTP/1.1" 200 63 http-bio-80-exec-5 146
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:21:19:50 +0800] "GET / HTTP/1.1" 304 - http-bio-80-exec-3 88
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:21:19:50 +0800] "GET /img/asset-favico.ico HTTP/1.1" 200 4286 http-bio-80-exec-5 12
+0:0:0:0:0:0:0:1 - - [18/Feb/2020:21:19:55 +0800] "GET /setmeal/findById.do?id=6 HTTP/1.1" 200 4955 http-bio-80-exec-7 1090

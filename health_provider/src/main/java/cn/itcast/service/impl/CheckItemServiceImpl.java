@@ -19,6 +19,7 @@ public class CheckItemServiceImpl implements CheckItemService {
     @Autowired
     private CheckItemDao checkItemDao;
 
+    //添加检查项
     public void add(CheckItem checkItem) {
         checkItemDao.add(checkItem);
     }

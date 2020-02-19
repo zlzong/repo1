@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.itcast.dao.UserDao">
+    <select id="findByUserName" parameterType="string" resultMap="findByUserNameResultMap">
+        select * from t_user where username = #{username}
+    </select>
+
+    <resultMap id="baseResultMap" type="cn.itcast.pojo.User">
+        <id column="id" property="id"/>
+        <result column="birthday" property="birthday"/>
+        <result column="gender" property="gender"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="remark" property="remark"/>
+        <result column="station" property="station"/>
+        <result column="telephone" property="telephone"/>
+    </resultMap>
+    
+    <resultMap id="findByUserNameResultMap" type="cn.itcast.pojo.User" extends="baseResultMap">
+        <collection property="roles"
+                    ofType="cn.itcast.pojo.Role"
+                    select="cn.itcast.dao.UserDao.queryRoleById"
+                    column="id">
+        </collection>
+    </resultMap>
+
+    <select id="queryRoleById" parameterType="integer" resultMap="queryRoleByIdResultMap">
+        select * from t_role where id = (select role_id from t_user_role where user_id = #{id})
+    </select>
+
+    <resultMap id="baseResultMap1" type="cn.itcast.pojo.Role">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="keyword" property="keyword"/>
+        <result column="description" property="description"/>
+    </resultMap>
+
+    <resultMap id="queryRoleByIdResultMap" type="cn.itcast.pojo.Role" extends="baseResultMap1">
+        <collection property="permissions"
+                    ofType="cn.itcast.pojo.Permission"
+                    select="cn.itcast.dao.UserDao.queryPermissionById"
+                    column="id">
+        </collection>
+    </resultMap>
+
+    <select id="queryPermissionById" parameterType="integer" resultType="cn.itcast.pojo.Permission">
+        select * from t_permission where id in (select permission_id from t_role_permission where role_id = #{id})
+    </select>
+</mapper>

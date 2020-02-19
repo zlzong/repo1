@@ -7,6 +7,7 @@ import cn.itcast.entity.Result;
 import cn.itcast.pojo.CheckItem;
 import cn.itcast.service.CheckItemService;
 import com.alibaba.dubbo.config.annotation.Reference;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,6 +21,7 @@ public class CheckItemController {
     private CheckItemService checkItemService;
 
     @RequestMapping("/add")
+    //添加检查项
     public Result add (@RequestBody CheckItem checkItem) {
         try {
             checkItemService.add(checkItem);
@@ -30,6 +32,7 @@ public class CheckItemController {
         return new Result(true, MessageConstant.ADD_CHECKITEM_SUCCESS);
     }
 
+    @PreAuthorize("hasAuthority('CHECKITEM_QUERY')")
     @RequestMapping("/findPage")
     public PageResult findPage(@RequestBody QueryPageBean queryPageBean) {
         PageResult pageResult = checkItemService.findPage(queryPageBean);

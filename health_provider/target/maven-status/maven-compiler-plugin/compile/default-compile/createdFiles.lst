@@ -1,10 +1,12 @@
 cn\itcast\dao\CheckGroupDao.class
+cn\itcast\service\impl\UserServiceImpl.class
 cn\itcast\service\impl\LoginServiceImpl.class
 cn\itcast\service\impl\OrderSettingServiceImpl.class
 cn\itcast\service\impl\CheckGroupServiceImpl.class
 cn\itcast\dao\CheckItemDao.class
 cn\itcast\dao\SetmealDao.class
 cn\itcast\service\impl\SetmealServiceImpl.class
+cn\itcast\dao\UserDao.class
 cn\itcast\dao\OrderDao.class
 cn\itcast\service\impl\OrderServiceImpl.class
 cn\itcast\service\impl\CheckItemServiceImpl.class

@@ -32,6 +32,7 @@
     <!--指定服务注册中心地址-->
     <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
     <!--批量扫描-->
+    <dubbo:annotation package="cn.itcast.service"/>
     <dubbo:annotation package="cn.itcast.controller"/>
     <!--超时全局设置 10分钟
      check=false 不检查服务提供方，开发阶段建议设置为false
@@ -39,8 +40,7 @@
      -->
     <dubbo:consumer timeout="600000" check="false"/>
     <!--文件上传组件-->
-    <bean id="multipartResolver"
-          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <property name="maxUploadSize" value="104857600"/>
         <property name="maxInMemorySize" value="4096"/>
         <property name="defaultEncoding" value="UTF-8"/>
@@ -48,4 +48,5 @@
 
     <!--加载redis文件-->
     <import resource="spring-redis.xml"/>
+    <import resource="spring-security.xml"/>
 </beans>
