@@ -1,4 +1,4 @@
-cn\itcast\controller\ValidateCode.class
-cn\itcast\controller\OrderController.class
-cn\itcast\controller\MobileController.class
-cn\itcast\controller\LoginController.class
+cn/itcast/controller/LoginController.class
+cn/itcast/controller/ValidateCode.class
+cn/itcast/controller/OrderController.class
+cn/itcast/controller/MobileController.class
