@@ -1,5 +1,6 @@
 cn\itcast\controller\CheckGroupController.class
 cn\itcast\controller\OrderSettingController.class
+cn\itcast\service\ReportController.class
 cn\itcast\service\SpringSecurityUserService.class
 cn\itcast\controller\CheckItemController.class
 cn\itcast\controller\SetmealController.class

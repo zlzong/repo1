@@ -5,6 +5,7 @@ import cn.itcast.entity.QueryPageBean;
 import cn.itcast.pojo.Setmeal;
 
 import java.util.List;
+import java.util.Map;
 
 public interface SetmealService {
     void add(Setmeal setmeal, Integer[] checkGroupIds);
@@ -12,4 +13,5 @@ public interface SetmealService {
     Setmeal findById(Integer id);
     Integer[] findCheckGroupBySetmealId(Integer id);
     List<Setmeal> getSetmeal();
+    List<Map<String, Object>> findSetmealCount();
 }

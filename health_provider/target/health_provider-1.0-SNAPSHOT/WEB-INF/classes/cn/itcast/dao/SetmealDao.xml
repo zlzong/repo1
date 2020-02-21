@@ -96,4 +96,8 @@
         <result column="attention" property="attention"/>
         <result column="img" property="img"/>
     </resultMap>
+    
+    <select id="findSetmealCount" resultType="map">
+        select s.name,count(o.id) value from t_setmeal s,t_order o where s.id = o.setmeal_id group by s.name
+    </select>
 </mapper>

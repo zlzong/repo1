@@ -47,4 +47,8 @@
     <select id="queryPermissionById" parameterType="integer" resultType="cn.itcast.pojo.Permission">
         select * from t_permission where id in (select permission_id from t_role_permission where role_id = #{id})
     </select>
+
+    <select id="findMemberCountByMonth" parameterType="String" resultType="integer">
+        select count(id) from t_member where regTime &lt;= #{value}
+    </select>
 </mapper>

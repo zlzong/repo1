@@ -87,6 +87,10 @@ public class SetmealServiceImpl implements SetmealService {
         return setmealDao.getSetmeal();
     }
 
+    public List<Map<String, Object>> findSetmealCount() {
+        return setmealDao.findSetmealCount();
+    }
+
 
     public void addSetmealAndCheckGroup(Integer setmealId, Integer[] checkGroupIds) {
         for (Integer checkGroupId : checkGroupIds) {
